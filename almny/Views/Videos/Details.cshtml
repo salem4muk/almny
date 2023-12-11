@@ -1,0 +1,229 @@
+﻿@model almny.Models.Video
+@{
+    ViewBag.Title = "الفديوهات التعليمية";
+
+}
+
+<!-- edit-comment -->
+<section class="edit-comment">
+    <h1 class="heading">تعديل التعليق</h1>
+    <form>
+        <input id="update-comment-id" type="hidden" name="update_id" value="#">
+        <textarea id="update-comment-box" name="update_box" class="box" maxlength="1000" required placeholder="الرجاء إدخال تعليقك" cols="30" rows="10"></textarea>
+        <div class="flex">
+            <input type="button" onclick="updateComment()" value="التحديث الآن" name="update_now" class="btn">
+            <a href="#" class="btn" onclick="cancelEdit()">إلغاء التعديل</a>
+        </div>
+    </form>
+</section>
+<!-- edit-comment -->
+<!-- watch-video -->
+<section class="watch-video">
+    <div class="video-container">
+        <div class="video">
+            <!-- Start Video play -->
+            <video src="~/Uploads/videos/@Model.video"
+                   controls
+                   poster="~/Uploads/images/@Model.thumb"
+                   id="video"></video>
+            <!-- End Video play -->
+        </div>
+        <h3 class="title">@Model.Title</h3>
+        <div class="info">
+            <p class="date">
+                <i class="fas fa-calendar"></i><span>  </span> <span>@Model.date.ToString("dd-MM-yyyy")</span>
+            </p>
+            <p class="date">
+                <i class="far fa-heart"></i><span> </span> <span>@ViewData["UserLikesCount"] إعجاب</span>
+            </p>
+        </div>
+        <div class="flex">
+            @if (ViewBag.IsLiked)
+            {
+                <button onclick="unlike()"><i class="fas fa-heart"></i><span>إعجبني</span></button>
+            }
+            else
+            {
+                <button onclick="like()"><i class="far fa-heart"></i><span>إعجاب</span></button>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- comments section starts  -->
+
+<section class="comments">
+
+    <h1 class="heading">إضافة تعليق</h1>
+
+    <form class="add-comment">
+        <input type="hidden" name="content_id" value="">
+        <input type="hidden" name="videoId" value="@Model.Id" />
+        <textarea id="commentText" name="commentText" required placeholder="اكتب تعليقك..." maxlength="1000" cols="30" rows="10"></textarea>
+        <input type="button" value="إضافة تعليق" onclick="addComment()" name="add_comment" class="btn">
+    </form>
+
+    <h1 class="heading">تعليقات المستخدم</h1>
+
+
+    <div class="show-comments">
+        @*<div class="box">
+        <div class="user">
+        <img src="../Images/icon/pic-1.jpg" alt="">
+        <div>
+        <h3>سالم ياسر</h3>
+        <span>22-10-2022</span>
+        </div>
+        </div>
+        <p class="text">طريقة مذهلة للتدريس! أشكرك كثيرًا!</p>
+
+        <form action="" method="post" class="flex-btn">
+        <input type="hidden" name="comment_id" value="">
+        <button type="submit" name="edit_comment" class="btn">تعديل التعليق</button>
+        <button type="submit" name="delete_comment" class="btn">حذف التعليق</button>
+        </form>
+        </div>*@
+
+    </div>
+
+</section>
+
+<!-- comments section ends -->
+
+<script>
+
+    function like() {
+        $.ajax({
+            url: '/api/AllDataApi/LikeVideo?videoId=' + @Model.Id,
+            type: 'POST',
+            success: function (result) {
+                location.reload(true);
+            }
+        });
+    }
+
+    function unlike() {
+        $.ajax({
+            url: '/api/AllDataApi/UnlikeVideo?videoId=' + @Model.Id,
+            type: 'DELETE',
+            success: function (result) {
+                location.reload(true);
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        loadComments();
+    });
+
+    function loadComments() {
+        var UserId = '@ViewData["UserId"]';
+        var videoId = @Model.Id;
+
+        $.ajax({
+            url: '/api/AllDataApi/GetVideoComments',
+            type: 'GET',
+            data: { videoId: videoId },
+            success: function (response) {
+                // قم بتحديث واجهة المستخدم بناءً على البيانات المسترجعة
+                var commentsContainer = $('.show-comments');
+                commentsContainer.empty();
+
+                response.forEach(function (comment) {
+                    var imageUser = "";
+                    if (comment.userImage == null) {
+                        imageUser = "../../Images/img/pic.jpg"
+                    }
+                    else {
+                        imageUser = "../../Uploads/images/" + comment.userImage;
+                    }
+                    var commentHtml = '<div class="box">' +
+                        '<div class="user">' +
+                        '<img src=" '+ imageUser + '" alt="">' +
+                        '<div>' +
+                        '<h3>' + comment.userName + '</h3>' +
+                        '<span>' + comment.commentDate + '</span>' +
+                        '</div>' +
+                        '</div>' +
+                        '<p class="text" id="comment_text">' + comment.commentText + '</p>';
+
+                    if (comment.userId == UserId) {
+                        commentHtml += '<input type="hidden" id="comment_id" name="comment_id" value="' + comment.commentId + '">' +
+                            '<button type="submit" name="delete_comment" onclick="editComment(this)" class="btn">تعديل التعليق</button>' +
+                            '<button type="submit" name="delete_comment" onclick="deleteComment(this)" class="btn">حذف التعليق</button>';
+                    }
+
+                    commentHtml += '</div>';
+                    commentsContainer.append(commentHtml);
+                });
+            },
+            error: function (xhr, status, error) {
+                console.error(error);
+            }
+        });
+    }
+
+    function addComment() {
+        var videoId = @Model.Id;
+        var commentText = $('#commentText').val();
+        $.ajax({
+            url: '/api/AllDataApi/AddComment?videoId=' + videoId + '&commentText=' + commentText,
+            type: 'POST',
+            success: function (response) {
+                 location.reload(true);
+            },
+            error: function () {
+                // حدث خطأ في عملية التحديث
+            }
+        });
+    }
+
+    // لحذف التعليق
+    function deleteComment(button) {
+        var commentId = button.parentNode.querySelector("#comment_id").value;
+        $.ajax({
+            url: '/api/AllDataApi/DeleteComment?commentId=' + commentId,
+            type: 'DELETE',
+            success: function (result) {
+                location.reload(true);
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error('Error deleting comment:', errorThrown);
+            }
+        });
+
+    }
+
+    function editComment(button) {
+        var commentId = button.parentNode.querySelector("#comment_id").value;
+        var commentText = button.parentNode.querySelector("#comment_text").textContent;
+        var edit_comment = document.querySelector(".edit-comment");
+        $('#update-comment-id').val(commentId);
+        $('#update-comment-box').val(commentText);
+        edit_comment.style.display = "block";
+        $('#update-comment-box').focus();
+
+    }
+
+    function cancelEdit() {
+        var edit_comment = document.querySelector(".edit-comment");
+        // إخفاء نموذج التعديل
+        edit_comment.style.display = "none";
+    }
+
+    function updateComment() {
+        var commentId = $('#update-comment-id').val();
+        var updatedCommentText = $('#update-comment-box').val();
+        $.ajax({
+            url: '/api/AllDataApi/UpdateComment?commentId=' + commentId + '&updatedComment=' + updatedCommentText,
+            type: 'PUT',
+            success: function (response) {
+                 location.reload(true);
+            },
+            error: function () {
+                // حدث خطأ في عملية التحديث
+            }
+        });
+    }
+</script>

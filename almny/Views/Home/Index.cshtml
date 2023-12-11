@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "الرئيسية";
+}
+
+<!-- Start Landing -->
+<section class="home">
+    <div class="content">
+        <h3>التعليم الإلكتروني هو وسيلة أفضل للتعلم</h3>
+        <p>يمكنك مشاهدة وتحميل المواد الدراسية الخاصة بك والاستفادة من المحتوى التعليمي المتاح على المنصة.</p>
+    </div>
+    <div class="image">
+        <img src="~/images/img/edu_ilastration.png" alt="" />
+    </div>
+</section>
+<!-- End Landing -->
+<!-- Start Services -->
+<h1 id="services" class="heading">مانقدمه لك</h1>
+<section id="services" class="services">
+    <div class="box">
+        <img src="~/images/icon/bookshelf.png" alt="" />
+        <h3>الكتب الدراسية</h3>
+        <p>هنا سوف تجد الكتب الخاصة بالمواد الدراسية</p>
+        <a asp-controller="Books" asp-action="Index" class="btn">المزيد</a>
+    </div>
+    <div class="box">
+        <img src="~/images/icon/online-class.png" alt="" />
+        <h3>دروس مشروحة</h3>
+        <p>هنا سوف تجد بعض الفديوهات الخاصة بالدروس تبعك</p>
+        <a asp-controller="Videos" asp-action="Index" class="btn">المزيد</a>
+    </div>
+    <div class="box">
+        <img src="~/images/icon/exam.png" alt="" />
+        <h3>امتحانات السنين السابقة</h3>
+        <p>هنا سوف تجد معظم امتحانات السنين السابقة وأغلبها محلول</p>
+        <a asp-controller="Exams" asp-action="Index" class="btn">المزيد</a>
+    </div>
+</section>
+<!-- End Services -->
+<!-- Start About us -->
+<h1 id="about" class="heading">نبذة عنا</h1>
+<section class="about">
+    <div class="content">
+        <p>
+            منصة "علمني" هي موقع إلكتروني يوفر مصادر تعليمية تفاعلية بشكل فيديوهات مسجلة للمرحلة الثانوية. تهدف المنصة إلى نشر المعرفة وتقديم الدروس التعليمية للطلاب عن بعد، وتركز بشكل خاص على طلاب الصف الثالث الثانوي في جميع التخصصات. يمكن للطلاب الوصول إلى الدروس والكتب للمواد التعليمية في أي وقت وتتضمن المنصة ملفات ومصادر تعليمية لتعزيز فهم الطلاب.
+        </p>
+    </div>
+
+    <div class="image">
+        <img src="~/images/img/education.png" alt="" />
+    </div>
+</section>
+<!-- End About us -->
+

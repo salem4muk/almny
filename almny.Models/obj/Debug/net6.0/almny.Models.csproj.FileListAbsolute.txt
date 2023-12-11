@@ -1,0 +1,24 @@
+D:\almny\almny.Models\bin\Debug\net6.0\almny.Models.deps.json
+D:\almny\almny.Models\bin\Debug\net6.0\almny.Models.dll
+D:\almny\almny.Models\bin\Debug\net6.0\almny.Models.pdb
+D:\almny\almny.Models\obj\Debug\net6.0\almny.Models.csproj.AssemblyReference.cache
+D:\almny\almny.Models\obj\Debug\net6.0\almny.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\almny\almny.Models\obj\Debug\net6.0\almny.Models.AssemblyInfoInputs.cache
+D:\almny\almny.Models\obj\Debug\net6.0\almny.Models.AssemblyInfo.cs
+D:\almny\almny.Models\obj\Debug\net6.0\almny.Models.csproj.CoreCompileInputs.cache
+D:\almny\almny.Models\obj\Debug\net6.0\almny.Models.dll
+D:\almny\almny.Models\obj\Debug\net6.0\refint\almny.Models.dll
+D:\almny\almny.Models\obj\Debug\net6.0\almny.Models.pdb
+D:\almny\almny.Models\obj\Debug\net6.0\ref\almny.Models.dll
+D:\Visual Studio Projects\almny\almny.Models\bin\Debug\net6.0\almny.Models.deps.json
+D:\Visual Studio Projects\almny\almny.Models\bin\Debug\net6.0\almny.Models.dll
+D:\Visual Studio Projects\almny\almny.Models\bin\Debug\net6.0\almny.Models.pdb
+D:\Visual Studio Projects\almny\almny.Models\obj\Debug\net6.0\almny.Models.csproj.AssemblyReference.cache
+D:\Visual Studio Projects\almny\almny.Models\obj\Debug\net6.0\almny.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio Projects\almny\almny.Models\obj\Debug\net6.0\almny.Models.AssemblyInfoInputs.cache
+D:\Visual Studio Projects\almny\almny.Models\obj\Debug\net6.0\almny.Models.AssemblyInfo.cs
+D:\Visual Studio Projects\almny\almny.Models\obj\Debug\net6.0\almny.Models.csproj.CoreCompileInputs.cache
+D:\Visual Studio Projects\almny\almny.Models\obj\Debug\net6.0\almny.Models.dll
+D:\Visual Studio Projects\almny\almny.Models\obj\Debug\net6.0\refint\almny.Models.dll
+D:\Visual Studio Projects\almny\almny.Models\obj\Debug\net6.0\almny.Models.pdb
+D:\Visual Studio Projects\almny\almny.Models\obj\Debug\net6.0\ref\almny.Models.dll

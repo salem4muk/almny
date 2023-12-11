@@ -1,0 +1,51 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> signInManager
+@inject UserManager<ApplicationUser> userManager
+@{
+    ViewBag.Title = "الملف الشخصي";
+    var userId = ((await userManager.GetUserAsync(User)).Id);
+    var userImage = ((await userManager.GetUserAsync(User)).ProfilePicture);
+}
+
+<section class="user-profile">
+    <h1 class="heading">ملفك الشخصي</h1>
+
+    <div class="info">
+        <div class="user">
+            @if(userImage == null)
+            {
+                <img src="~/images/img/pic.jpg" alt="" />
+
+            }else
+            {
+                <img src="~/Uploads/images/@userImage" alt="~/images/img/pic.jpg" />
+            }
+            <h3>@ViewBag.UserName</h3>
+            <a asp-action="Update" asp-route-id="@userId" class="btn">تحديث الملف الشخصي</a>
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+                <div class="flex">
+                    <i class="fas fa-heart"></i>
+                    <div>
+                        <span>@TempData["UserLikesCount"]</span>
+                        <p>مقاطع الفيديو التي أعجبتني</p>
+                    </div>
+                </div>
+                <a asp-action="Index" asp-controller="Likes" asp-route-id="@userId" class="btn">عرض مقاطع الفيديو التي أعجبتني</a>
+            </div>
+
+            <div class="box">
+                <div class="flex">
+                    <i class="fas fa-comment"></i>
+                    <div>
+                        <span>@TempData["UserCommentsCount"]</span>
+                        <p>تعليقات الفيديو</p>
+                    </div>
+                </div>
+                <a asp-action="Index" asp-controller="Comments" asp-route-id="@userId" class="btn">عرض التعليقات</a>
+            </div>
+        </div>
+    </div>
+</section>

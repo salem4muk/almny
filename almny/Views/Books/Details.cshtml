@@ -1,0 +1,13 @@
+﻿@model almny.Models.Book
+@{
+    ViewBag.Title = "الكتب الدراسية";
+}
+
+<h1 class="heading">@Model.Title</h1>
+    <center>
+        <object data="~/Uploads/books/@Model.book"
+                width="800"
+                height="900">
+            </object>
+    </center>
+

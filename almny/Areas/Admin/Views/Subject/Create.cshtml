@@ -1,0 +1,16 @@
+﻿@model SubjectViewModel
+@{
+    ViewBag.Title = "اضافة - المواد الدراسية";
+}
+
+<section class="video-form">
+    <h1 class="heading">أضافة مادة دراسية</h1>
+    <form asp-action="Create" method="post" role="form"> 
+        @Html.AntiForgeryToken()
+        <p>اسم المادة <span>*</span></p>
+        <input asp-for="Name" class="box form-control" placeholder="ادخل اسم المادة" maxlength="20" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <input type="submit" value="اضافة" name="submit" class="btn">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    </form>
+</section>

@@ -1,0 +1,34 @@
+﻿@model almny.Models.DTO.UpdateModel
+
+@{
+    ViewData["Title"] = "تحديث الملف الشخصي";
+}
+
+
+<section class="form-container">
+
+    <form asp-area="Admin" asp-controller="Account" asp-action="Update" method="post" class="register" role="form" enctype="multipart/form-data">
+        <input asp-for="ProfilePicture" hidden />
+        <input asp-for="Id" hidden />
+
+        <h3>تحديث الملف الشخصي</h3>
+        <p>الاسم <span>*</span></p>
+        <input asp-for="Name" class="box" placeholder="أدخل اسمك" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <p>بريدك الإلكتروني <span>*</span></p>
+        <input asp-for="Email" class="box" placeholder="أدخل بريدك الإلكتروني" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+        <p>اختر صورة الملف الشخصي </p>
+        <input type="file" name="ProfilePicture" accept=".png, .jpg, .jpeg" id="ProfilePicture" class="box" />
+        <div id="errorMessage" class="text-danger"></div>
+        @if (TempData["msg"] != null)
+        {
+            <div class="text-danger">@TempData["msg"]</div>
+        }
+
+        <input type="submit" name="submit" value="تحديث الملف الشخصي" class="option-btn">
+        <span asp-validation-summary="All" class="text-danger"></span>
+    </form>
+
+</section>
+

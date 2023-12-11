@@ -1,0 +1,72 @@
+﻿@model IEnumerable<almny.Models.Comment>
+@{
+    ViewBag.Title = "التعليقات";
+}
+<section class="comments">
+    <h1 class="heading">كافة تعليقات المستخدمين</h1>
+
+    <section class="video-form">
+        <form method="get" asp-action="Index" class="video-form" style="max-width: 100%;" >
+            <p>الفلترة بواسطة الفيديوهات </p>
+            <select name="VideoId" asp-items="ViewBag.VideoId" class="box">
+                <option value="">--  اختر الفيديو</option>
+            </select>
+            <button class="btn" type="submit">تحديث</button>
+
+        </form>
+    </section>
+
+    <div class="show-comments">
+
+
+        @foreach (var comment in Model)
+        {
+
+            var imageUser = "";
+            if (comment.User.ProfilePicture == null)
+            {
+                imageUser = "../../Images/img/pic.jpg";
+            }
+            else
+            {
+                imageUser = "../../Uploads/images/" + comment.User.ProfilePicture;
+            }
+            <div class="box">
+                <h1>@comment.Video.Title</h1>
+                <div class="user">
+                    <img src="@imageUser" alt="">
+                    <div>
+                        <h3>@comment.User.Name</h3>
+                        <span>@comment.date.ToString("dd-MM-yyyy")</span>
+                        <a asp-area="" asp-controller="Videos" asp-action="Details" asp-route-id="@comment.VideoId" 
+                        style="
+                               font-size: 2rem;
+                               margin-right: 3px;"
+                        >عرض المحتوى</a>
+                    </div>
+                </div>
+                <p class="text">@comment.comment</p>
+                <form asp-action="Delete" asp-route-id="@comment.Id" method="post" class="flex-btn">
+                    <input type="submit" value="حذف التعليق" class="btn">
+                </form>
+            </div>
+@* 
+            <div class="box">
+                <div class="content">
+                    <span>@comment.date.ToString("dd-MM-yyyy")</span>
+                    <p>@comment.Video.Title</p>
+                    <a asp-area="" asp-controller="Videos" asp-action="Details" asp-route-id="@comment.VideoId">عرض المحتوى</a>
+                </div>
+                <p class="text">@comment.comment</p>
+                <form asp-action="Delete" asp-route-id="@comment.Id" method="post" class="flex-btn">
+                    <input type="submit" value="حذف التعليق" class="btn">
+                </form>
+            </div> *@
+        }
+
+
+    </div>
+
+</section>
+
+

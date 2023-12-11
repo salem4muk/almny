@@ -1,0 +1,505 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\almny.bundle.scp.css",
+      "PackagePath": "staticwebassets\\almny.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Admin\\Images\\icon\\3almny.png",
+      "PackagePath": "staticwebassets\\Admin\\Images\\icon\\3almny.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Admin\\css\\admin_style.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\admin_style.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Admin\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\all.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Admin\\css\\normalize.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\normalize.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Admin\\fonts\\JF_Flat_Regular.ttf",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\JF_Flat_Regular.ttf"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Admin\\fonts\\material_icons.woff2",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\material_icons.woff2"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Admin\\fonts\\material_symbols_outlined.woff2",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\material_symbols_outlined.woff2"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Admin\\js\\admin_script.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\admin_script.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Admin\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\Admin\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Admin\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\Admin\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Admin\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\Admin\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Admin\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\Admin\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Admin\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\Admin\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Admin\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\Admin\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Admin\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\Admin\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Admin\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\Admin\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Images\\icon\\3almny.png",
+      "PackagePath": "staticwebassets\\Images\\icon\\3almny.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Images\\icon\\bookshelf.png",
+      "PackagePath": "staticwebassets\\Images\\icon\\bookshelf.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Images\\icon\\exam.png",
+      "PackagePath": "staticwebassets\\Images\\icon\\exam.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Images\\icon\\online-class.png",
+      "PackagePath": "staticwebassets\\Images\\icon\\online-class.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Images\\img\\edu_ilastration.png",
+      "PackagePath": "staticwebassets\\Images\\img\\edu_ilastration.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Images\\img\\education.png",
+      "PackagePath": "staticwebassets\\Images\\img\\education.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Images\\img\\education_aa.jpg",
+      "PackagePath": "staticwebassets\\Images\\img\\education_aa.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Images\\img\\exams_rafiki.png",
+      "PackagePath": "staticwebassets\\Images\\img\\exams_rafiki.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Images\\img\\hero-back.jpg",
+      "PackagePath": "staticwebassets\\Images\\img\\hero-back.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Images\\img\\pic.jpg",
+      "PackagePath": "staticwebassets\\Images\\img\\pic.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Images\\img\\support-team.png",
+      "PackagePath": "staticwebassets\\Images\\img\\support-team.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\books\\284ee9ae-bf7e-4d97-8ef1-599c05e7389e.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\books\\284ee9ae-bf7e-4d97-8ef1-599c05e7389e.pdf"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\books\\7505dfb9-3592-462c-be23-2b250baaeed9.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\books\\7505dfb9-3592-462c-be23-2b250baaeed9.pdf"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\images\\00a9de11-8cc2-4eeb-a35e-b6f6c968b895.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\images\\00a9de11-8cc2-4eeb-a35e-b6f6c968b895.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\images\\026e2830-d719-4c57-8b0e-67bad809f076.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\images\\026e2830-d719-4c57-8b0e-67bad809f076.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\images\\05ccd2eb-0e8c-4cc3-9e8f-c55ed8ba2836.png",
+      "PackagePath": "staticwebassets\\Uploads\\images\\05ccd2eb-0e8c-4cc3-9e8f-c55ed8ba2836.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\images\\21f4173f-f1f0-4475-9a97-514b9d52d81b.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\images\\21f4173f-f1f0-4475-9a97-514b9d52d81b.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\images\\3fe6fced-c595-4b7c-9e88-883b198052fe.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\images\\3fe6fced-c595-4b7c-9e88-883b198052fe.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\images\\71ea849c-036b-475d-8d0f-5a243647aa80.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\images\\71ea849c-036b-475d-8d0f-5a243647aa80.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\images\\755067b9-e9b2-45ab-ba43-cbf332bf0d75.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\images\\755067b9-e9b2-45ab-ba43-cbf332bf0d75.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\images\\7b23e131-d49a-4331-8b01-b10e864edd9c.png",
+      "PackagePath": "staticwebassets\\Uploads\\images\\7b23e131-d49a-4331-8b01-b10e864edd9c.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\images\\7e2c5ba0-ca0c-468b-a173-0ed3a2caa47d.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\images\\7e2c5ba0-ca0c-468b-a173-0ed3a2caa47d.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\images\\93248b3b-e2ac-430c-8e0a-023b68bfcb2e.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\images\\93248b3b-e2ac-430c-8e0a-023b68bfcb2e.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\images\\9dd81a88-0115-4027-82c1-385c96672d4c.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\images\\9dd81a88-0115-4027-82c1-385c96672d4c.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\images\\9fc7999f-dbaa-4c5e-8d4c-c7b0b0dd3291.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\images\\9fc7999f-dbaa-4c5e-8d4c-c7b0b0dd3291.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\images\\c11c0290-8ea5-4c96-9faf-a410474c8112.png",
+      "PackagePath": "staticwebassets\\Uploads\\images\\c11c0290-8ea5-4c96-9faf-a410474c8112.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\videos\\3f0c084f-7a4e-4f26-8f72-b4672ba68f1a.mp4",
+      "PackagePath": "staticwebassets\\Uploads\\videos\\3f0c084f-7a4e-4f26-8f72-b4672ba68f1a.mp4"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\videos\\9afa52b2-6baf-4ead-9d2e-a4b59c6c4caa.mp4",
+      "PackagePath": "staticwebassets\\Uploads\\videos\\9afa52b2-6baf-4ead-9d2e-a4b59c6c4caa.mp4"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\Uploads\\videos\\a602e9fd-adf8-4511-b026-fd4c351279a4.mp4",
+      "PackagePath": "staticwebassets\\Uploads\\videos\\a602e9fd-adf8-4511-b026-fd4c351279a4.mp4"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\css\\all.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\css\\normalize.css",
+      "PackagePath": "staticwebassets\\css\\normalize.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\fonts\\JF_Flat_Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\JF_Flat_Regular.ttf"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\fonts\\material_icons.woff2",
+      "PackagePath": "staticwebassets\\fonts\\material_icons.woff2"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\fonts\\material_symbols_outlined.woff2",
+      "PackagePath": "staticwebassets\\fonts\\material_symbols_outlined.woff2"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\js\\jquery-3.6.4.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.6.4.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\js\\modernizr-2.8.3.js",
+      "PackagePath": "staticwebassets\\js\\modernizr-2.8.3.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "D:\\Visual Studio Projects\\almny\\almny\\wwwroot\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.almny.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.almny.props",
+      "PackagePath": "build\\almny.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.almny.props",
+      "PackagePath": "buildMultiTargeting\\almny.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.almny.props",
+      "PackagePath": "buildTransitive\\almny.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

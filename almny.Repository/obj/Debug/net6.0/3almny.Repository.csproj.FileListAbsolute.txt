@@ -1,0 +1,15 @@
+D:\3almny\3almny.Repository\bin\Debug\net6.0\3almny.Repository.deps.json
+D:\3almny\3almny.Repository\bin\Debug\net6.0\3almny.Repository.dll
+D:\3almny\3almny.Repository\bin\Debug\net6.0\3almny.Repository.pdb
+D:\3almny\3almny.Repository\bin\Debug\net6.0\3almny.Models.dll
+D:\3almny\3almny.Repository\bin\Debug\net6.0\3almny.Models.pdb
+D:\3almny\3almny.Repository\obj\Debug\net6.0\3almny.Repository.csproj.AssemblyReference.cache
+D:\3almny\3almny.Repository\obj\Debug\net6.0\3almny.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\3almny\3almny.Repository\obj\Debug\net6.0\3almny.Repository.AssemblyInfoInputs.cache
+D:\3almny\3almny.Repository\obj\Debug\net6.0\3almny.Repository.AssemblyInfo.cs
+D:\3almny\3almny.Repository\obj\Debug\net6.0\3almny.Repository.csproj.CoreCompileInputs.cache
+D:\3almny\3almny.Repository\obj\Debug\net6.0\3almny.Repository.csproj.CopyComplete
+D:\3almny\3almny.Repository\obj\Debug\net6.0\3almny.Repository.dll
+D:\3almny\3almny.Repository\obj\Debug\net6.0\refint\3almny.Repository.dll
+D:\3almny\3almny.Repository\obj\Debug\net6.0\3almny.Repository.pdb
+D:\3almny\3almny.Repository\obj\Debug\net6.0\ref\3almny.Repository.dll

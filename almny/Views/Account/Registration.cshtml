@@ -1,0 +1,49 @@
+﻿@model almny.Models.DTO.RegistrationModel
+@{
+    ViewData["Title"] = "التسجيل";
+}
+
+<section class="form-container">
+
+    <form asp-controller="Account" asp-action="Registration" method="post" class="register" role="form" enctype="multipart/form-data">
+        <h3>إنشاء حساب</h3>
+        <div class="flex">
+            <div class="col">
+                <p>الاسم <span>*</span></p>
+                <input asp-for="Name" class="box" placeholder="أدخل اسمك" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+                <p>بريدك الإلكتروني <span>*</span></p>
+                <input asp-for="Email" class="box" placeholder="أدخل بريدك الإلكتروني" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="col">
+                <p>كلمة المرور الخاصة بك <span>*</span></p>
+                <input asp-for="Password" type="password" class="box" placeholder="أدخل كلمة المرور الخاصة بك" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+                <p>تأكيد كلمة المرور <span>*</span></p>
+                <input asp-for="PasswordConfirm" type="password" class="box" placeholder="أدخل تأكيد كلمة المرور" />
+                <span asp-validation-for="PasswordConfirm" class="text-danger"></span>
+            </div>
+        </div>
+        <p>اختر صورة الملف الشخصي <span>*</span></p>
+        <input type="file" name="ProfilePicture" accept=".png, .jpg, .jpeg" id="ProfilePicture" class="box" />
+        @if (TempData["msg"] != null)
+        {
+            <div class="text-danger">@TempData["msg"]</div>
+        }        
+        <p class="link">لديك حساب بالفعل? <a style="color:#813daf;" asp-controller="Account" asp-action="Login">تسجيل الدخول الآن</a></p>
+        <button type="submit" name="submit" id="register" class="option-btn">سجل الآن</button>
+    </form>
+</section>
+
+<script>
+    // $('#register').on('click', function () {
+    //     var imageValue = $('#ProfilePicture').val();
+    //     if (imageValue === '') {
+    //         $('#errorMessage').text("الرجاء اختيار صورة الملف الشخصي");
+    //         return false;
+    //     } else {
+    //         $('#errorMessage').empty();
+    //     }
+    // });
+</script>

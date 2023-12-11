@@ -1,0 +1,44 @@
+﻿@model almny.Areas.Admin.Models.DashboardCountsModel
+
+@{
+    ViewData["Title"] = "لوحة القيادة";
+}
+
+<section class="dashboard">
+
+    <h1 class="heading">لوحة القيادة</h1>
+
+    <div class="box-container">
+        <div class="box">
+            <h3>@Model.CountSubjects</h3>
+            <p>إجمالي المواد الدراسية</p>
+            <a asp-action="Create" asp-controller="Subject" class="btn">إضافة مادة جديدة</a>
+        </div>
+
+        <div class="box">
+            <h3>@Model.CountVideos</h3>
+            <p>إجمالي الفديوهات التعليمية</p>
+            <a asp-action="Create" asp-controller="Video" class="btn">إضافة فيديو جديد</a>
+        </div>
+
+        <div class="box">
+            <h3>@Model.CountBooks</h3>
+            <p>إجمالي الكتب الدراسية</p>
+            <a asp-action="Create" asp-controller="Book" class="btn">إضافة كتاب جديدة</a>
+        </div>
+
+        <div class="box">
+            <h3>@Model.CountLikes</h3>
+            <p>إجمالي الإعجابات</p>
+            <a asp-action="Index" asp-controller="Like" class="btn">عرض المحتويات</a>
+        </div>
+
+        <div class="box">
+            <h3>@Model.CountComments</h3>
+            <p>مجموع التعليقات</p>
+            <a asp-action="Index" asp-controller="Comment" class="btn">عرض التعليقات</a>
+        </div>
+
+    </div>
+
+</section>

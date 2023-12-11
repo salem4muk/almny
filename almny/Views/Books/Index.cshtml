@@ -1,0 +1,239 @@
+﻿@model IEnumerable<almny.Models.Book>
+@{
+    ViewBag.Title = "الكتب الدراسية";
+}
+
+<!-- Start Landing -->
+<section class="landing">
+    <div class="image">
+        <img src="~/Images/img/hero-back.jpg" alt="" />
+    </div>
+</section>
+<!-- End Landing -->
+<!-- Start Subjects (Title,desc) -->
+<h1 class="heading">الكتب الدراسيه</h1>
+<p class="content-p">
+    هنا سوف تجد كل الكتب الدراسيه الي انت محتاجها .. كل الي عليك انك تختار
+    الكتاب و تختار انك تحملها او تستعرضها اونلاين
+</p>
+<!-- End Subjects (Title,desc) -->
+<!-- Start Select Section (level,dept,Semester) -->
+<section class="select-section">
+    <div class="select_level">
+        <label for="select_level">أختيار المستوى الدراسي : </label>
+        <select id="select_level" class="select-box" onchange="handleSelectChange()">
+            <option selected value=""> -- المستوى الدراسي</option>
+            <option value="1">الاول ثانوي</option>
+            <option value="2">الثاني ثانوي</option>
+            <option value="3">الثالث ثانوي</option>
+        </select>
+    </div>
+    <div class="select_dept">
+        <label for="select_dept" id="label_dept">أختيار القسم : </label>
+        <select id="select_dept">
+            <option selected value=""> -- القسم</option>
+            <option value="1">العلمي</option>
+            <option value="2">الادبي</option>
+        </select>
+    </div>
+    <div class="select_semester">
+        <label for="select_semester">أختيار الفصل الدراسي : </label>
+        <select id="select_semester">
+            <option selected value=""> -- الفصل الدراسي</option>
+            <option value="1">الفصل الاول</option>
+            <option value="2">الفصل الثاني</option>
+        </select>
+    </div>
+</section>
+<!-- End Select Section (level,dept,Semester) -->
+<!-- Start Select Section (Subjects) -->
+<section class="select-subjects">
+    <div class="select-sub">
+        <ul class="list-sub"></ul>
+    </div>
+</section>
+<!-- End Select Section (Subjects) -->
+<!-- Start Subjects Section-->
+
+<h3 id="notData" class="heading" style="border-bottom:0">لاتوجد اي بيانات</h3>
+
+<!-- Start Book Section-->
+<section class="book">
+    @*<div class="box">
+    <img src="~/Uploads/images/" alt="" />
+    <a href="details_book_page.html" class="btn">أستعراض</a>
+    <a href="~/Uploads/books/" download class="btn">التحميل</a>
+    </div>*@
+</section>
+<!-- End Book Section-->
+
+
+<script>
+    var notData = document.getElementById('notData');
+    var container = document.querySelector('.book');
+
+    $(document).ready(function () {
+        GetBindData()
+        GetSubjects()
+    });
+
+    function GetSubjects() {
+        $.ajax({
+            url: "/api/AllDataApi/GetSubjects", // Update the URL to match your controller and action
+            type: "GET",
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            success: function (response) {
+                var list = document.querySelector(".list-sub");
+                list.innerHTML = "";
+                response.forEach(function (item) {
+                    var listItem = document.createElement("li");
+                    listItem.textContent = item.name;
+                    listItem.setAttribute("data-id", item.id);
+                    list.appendChild(listItem);
+                });
+            },
+            error: function (xhr, status, error) {
+                console.log("حدث خطأ في الطلب:", error);
+            }
+        });
+    }
+
+    function GetBindData() {
+        $.ajax({
+            url: "/Api/AllDataApi/GetBooks",
+            method: 'GET',
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            success: function (result) {
+                if (result[0] != null) {
+                    container.innerHTML = "";
+                    BindDataToTable(result);
+                } else {
+                    container.innerHTML = "";
+                    notData.style.display = "block";
+                }
+
+            },
+            fail: function (jqXHR, textStatus) {
+                alert("Request failed: " + textStatus);
+            }
+        })
+    }
+
+    var subjectItems = $(".list-sub");
+    subjectItems.on("click", function () {
+        $('li[data-id]').click(function (e) {
+            e.stopPropagation();
+            const subjectId = $(this).closest('li').data('id');
+            GetFilteredBooks(subjectId);
+        });
+    });
+
+    function GetFilteredBooks(subjectId) {
+        var url;
+        var level = $("#select_level").val();
+        var dept = $("#select_dept").val();
+        var semester = $("#select_semester").val();
+        if (level == "1") {
+            url = '/api/AllDataApi/GetFilteredBooks?subject=' + subjectId + '&level=' + level + '&dept=' + 3 + '&semester=' + semester;
+        } else {
+            url = '/api/AllDataApi/GetFilteredBooks?subject=' + subjectId + '&level=' + level + '&dept=' + dept + '&semester=' + semester;
+        }
+        console.log(url);
+        $.ajax({
+            url: url,
+            method: 'POST',
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            success: function (response) {
+                if (response[0] != null) {
+                    container.innerHTML = "";
+                    BindDataToTable(response);
+                } else {
+                    container.innerHTML = "";
+                    notData.style.display = "block";
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error(error);
+            }
+        });
+    }
+
+
+    $(document).ready(function () {
+        $("#select_level, #select_dept, #select_semester").change(function () {
+            var level = $("#select_level").val();
+            var dept = $("#select_dept").val();
+            var semester = $("#select_semester").val();
+            var url;
+            if (level == "1") {
+                url = '/api/AllDataApi/GetFilteredBooks?level=' + level + '&dept=' + 3 + '&semester=' + semester;
+            } else {
+                url = '/api/AllDataApi/GetFilteredBooks?level=' + level + '&dept=' + dept + '&semester=' + semester;
+            }
+            // إرسال طلب AJAX
+            $.ajax({
+                url: url,
+                type: "POST",
+                dataType: 'json',
+                contentType: 'application/json; charset=utf-8',
+                success: function (response) {
+                    if (response[0] != null) {
+                        container.innerHTML = "";
+                        BindDataToTable(response);
+                    } else {
+                        container.innerHTML = "";
+                        notData.style.display = "block";
+                    }
+
+                },
+                error: function (xhr, status, error) {
+                    console.log("حدث خطأ في الطلب:", error);
+                }
+            });
+        });
+    });
+
+    function BindDataToTable(data) {
+        if (data[0] != null && data) {
+            notData.style.display = "none";
+            data.forEach(function (item) {
+                var box = document.createElement('div');
+                box.classList.add('box');
+                container.appendChild(box);
+
+                var image = document.createElement('img');
+                image.src = "../Uploads/images/" + item.thumb;
+                box.appendChild(image);
+
+                var detailsLink = document.createElement('a');
+                detailsLink.href = "@Url.Action("Details", "Books")" + "/" + item.id;
+                detailsLink.classList.add('btn');
+                detailsLink.textContent = "أستعراض";
+                box.appendChild(detailsLink);
+
+                var downloadLink = document.createElement('a');
+                downloadLink.href = "../Uploads/books/" + item.book;
+                downloadLink.download = "../Uploads/books/" + item.book;
+                downloadLink.classList.add('btn');
+                downloadLink.textContent = "التحميل";
+                box.appendChild(downloadLink);
+
+            });
+        }
+    }
+
+
+    function handleSelectChange() {
+        var selectElement = document.getElementById("select_level");
+        var select_dept = document.querySelector(".select_dept");
+
+        if (selectElement.value === "2" || selectElement.value === "3") {
+            select_dept.style.display = "block";
+        } else {
+            select_dept.style.display = "none";
+        }
+    }
+</script>

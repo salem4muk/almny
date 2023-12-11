@@ -1,0 +1,62 @@
+﻿@model almny.Models.DTO.LoginModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="~/Admin/Images/icon/3almny.png" />
+    <title>تسجيل الدخول</title>
+    <!-- Main Template CSS File -->
+    <link href="~/Admin/css/admin_style.css" rel="stylesheet" />
+    <!-- Render All Elements Normally -->
+    <link href="~/Admin/css/normalize.css" rel="stylesheet" />
+    <!-- Font Awesome Library -->
+    <link href="~/Admin/css/all.min.css" rel="stylesheet" />
+
+    <style>
+        .text-danger {
+            font-size: 1rem;
+            color: white;
+            margin: 1rem;
+            margin: 10px auto;
+            color: #D8000C;
+            background-color: #FFBABA;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body style="padding-right: 0;">
+
+    <!-- Login section starts  -->
+    <section class="form-container">
+
+        <form asp-controller="Account" asp-action="Login" method="post" class="login" role="form">
+            @Html.AntiForgeryToken()
+            <h3>مرحباً بك</h3>
+            <p>بريدك الإلكتروني <span>*</span></p>
+            <input asp-for="Email" class="box" placeholder="أدخل بريدك الإلكتروني" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+            <p>كلمة المرور الخاصة بك <span>*</span></p>
+            <input asp-for="Password" type="password" class="box" placeholder="أدخل كلمة المرور الخاصة بك" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+            <input type="submit" name="submit" value="تسجيل الدخول الآن" class="btn" />
+            <span asp-validation-summary="All" class="text-danger"></span>
+
+            @if (TempData["msg"] != null)
+            {
+                <div class="text-danger">@TempData["msg"]</div>
+            }
+        </form>
+
+    </section>
+    <!-- Login section ends -->
+
+    <script src="~/Admin/js/admin_script.js"></script>
+    <script src="~/js/modernizr-2.8.3.js"></script>
+</body>
+</html>

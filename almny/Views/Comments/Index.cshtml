@@ -1,0 +1,95 @@
+﻿@model IEnumerable<almny.Models.Comment>
+@{
+    ViewBag.Title = "تعليقاتك";
+}
+
+<!-- edit-comment -->
+<section class="edit-comment">
+    <h1 class="heading">تعديل التعليق</h1>
+    <form>
+        <input id="update-comment-id" type="hidden" name="update_id" value="#">
+        <textarea id="update-comment-box" name="update_box" class="box" maxlength="1000" required placeholder="الرجاء إدخال تعليقك" cols="30" rows="10"></textarea>
+        <div class="flex">
+            <input type="button" onclick="updateComment()" value="التحديث الآن" name="update_now" class="btn">
+            <a href="#" class="btn" onclick="cancelEdit()">إلغاء التعديل</a>
+        </div>
+    </form>
+</section>
+<!-- edit-comment -->
+@if (!Model.Any())
+{
+    <h3 class="heading" style="border-bottom: 0; ">لاتوجد تعلقيات خاصة بك</h3>
+}
+
+<section class="comments">
+    <h1 class="heading">تعليقاتك</h1>
+    <div class="show-comments">
+        @foreach (var comment in Model)
+        {
+            <div class="box">
+                <div class="content">
+                    <span>@comment.date.ToString("dd-MM-yyyy")</span>
+                    <p>@comment.Video.Title</p>
+                    <a href="@Url.Action("Details", "Videos", new { id = comment.VideoId })">عرض المحتوى</a>
+                </div>
+                <p id="comment_text" class="text">@comment.comment</p>
+                <input type="hidden" id="comment_id" name="comment_id" value="@comment.Id">
+                <button type="submit" onclick="editComment(this)" name="edit_comment" class="btn">تعديل التعليق</button>
+                <button type="submit" onclick="deleteComment(this)" name="delete_comment" class="btn">حذف التعليق</button>
+            </div>
+        }
+
+
+    </div>
+</section>
+
+<script>
+    // لحذف التعليق
+    function deleteComment(button) {
+        var commentId = button.parentNode.querySelector("#comment_id").value;
+        $.ajax({
+            url: '/api/AllDataApi/DeleteComment?commentId=' + commentId,
+            type: 'DELETE',
+            success: function (result) {
+                location.reload(true);
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error('Error deleting comment:', errorThrown);
+            }
+        });
+
+    }
+
+    function editComment(button) {
+        var commentId = button.parentNode.querySelector("#comment_id").value;
+        var commentText = button.parentNode.querySelector("#comment_text").textContent;
+        var edit_comment = document.querySelector(".edit-comment");
+        $('#update-comment-id').val(commentId);
+        $('#update-comment-box').val(commentText);
+        edit_comment.style.display = "block";
+        $('#update-comment-box').focus();
+
+    }
+
+    function cancelEdit() {
+        var edit_comment = document.querySelector(".edit-comment");
+        // إخفاء نموذج التعديل
+        edit_comment.style.display = "none";
+    }
+
+    function updateComment() {
+        var commentId = $('#update-comment-id').val();
+        var updatedCommentText = $('#update-comment-box').val();
+        $.ajax({
+            url: '/api/AllDataApi/UpdateComment?commentId=' + commentId + '&updatedComment=' + updatedCommentText,
+            type: 'PUT',
+            success: function (response) {
+                location.reload(true);
+            },
+            error: function () {
+                // حدث خطأ في عملية التحديث
+            }
+        });
+    }
+</script>

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<almny.Models.Like>
+@{
+    ViewBag.Title = "الفيديو التي أعجبتني";
+}
+
+<h1 class="heading">مقاطع الفيديو التي أعجبتك</h1>
+
+
+
+@if (!Model.Any())
+{
+    <h3 class="heading" style="border-bottom: 0; ">لاتوجد مقاطع فيديو تم الاعجاب بها</h3>
+}
+<section class="course">
+
+
+    @foreach (var like in Model)
+    {
+        <div class="box">
+            <img src="~/Uploads/images/@like.Video.thumb" alt="" class="thumb" style="width: auto;" />
+            <h3 class="title">@like.Video.Title</h3>
+            <a href="@Url.Action("Details", "Videos", new { id = like.Video.Id })" class="btn">مشاهدة الفيديو</a>
+            <input type="button" onclick="unlike(@like.Video.Id)" value="حذف الفيديو" class="btn" name="remove" />
+        </div>
+    }
+
+</section>
+
+<script>
+
+    function unlike(videoId) {
+        $.ajax({
+            url: '/api/AllDataApi/UnlikeVideo?videoId=' + videoId,
+            type: 'DELETE',
+            success: function (result) {
+                location.reload(true);
+            }
+        });
+    }
+
+</script>

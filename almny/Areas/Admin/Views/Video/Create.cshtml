@@ -1,0 +1,70 @@
+﻿@model almny.Areas.Admin.Models.DTO.VideoViewModel
+
+@{
+    ViewData["Title"] = "اضافة - الفيديوهات التعليمية";
+}
+
+<section class="video-form">
+
+    <h1 class="heading">أضافة فيديو تعليمي</h1>
+
+    <form asp-action="Create" asp-controller="Video" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+        <input asp-for="thumb" hidden />
+        <input asp-for="video" hidden />
+        <input asp-for="Id" hidden />
+        <p>عنوان الفيديو <span>*</span></p>
+        <input asp-for="Title" class="box" placeholder="ادخل عنوان الفيديو" maxlength="100" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+
+        <p>المستوى الدراسي <span>*</span></p>
+        <select asp-for="LevelId" asp-items="ViewBag.LevelId" class="box">
+            <option value="">-- المستوى الدراسي</option>
+        </select>
+        <span asp-validation-for="LevelId" class="text-danger"></span>
+
+        <p>القسم <span>*</span></p>
+        <select asp-for="DepartmentId" asp-items="ViewBag.DepartmentId" class="box">
+            <option value="">-- القسم</option>
+        </select>
+        <span asp-validation-for="DepartmentId" class="text-danger"></span>
+
+        <p>الفصل الدراسي <span>*</span></p>
+        <select asp-for="SemesterId" asp-items="ViewBag.SemesterId" class="box">
+            <option value="">-- الفصل الدراسي</option>
+        </select>
+        <span asp-validation-for="SemesterId" class="text-danger"></span>
+
+        <p>المادة الدراسية <span>*</span></p>
+        <select asp-for="SubjectId" asp-items="ViewBag.SubjectId" class="box" class="box">
+            <option value="">-- المادة الدراسية</option>
+        </select>
+        <span asp-validation-for="SubjectId" class="text-danger"></span>
+
+        <p>اختر صورة مصغرة <span>*</span></p>
+        <input type="file" name="thumb"  class="box" accept=".png, .jpg, .jpeg">
+        <span asp-validation-for="thumb" class="text-danger"></span>
+
+        <p>اختر فيديو <span>*</span></p>
+        <input type="file" name="video" id="video" accept=".mp4"  class="box">
+        <span asp-validation-for="video" class="text-danger"></span>
+        <div id="errorMessage" class="text-danger"></div>
+
+        <input type="submit" value="اضافة" name="submit" id="save" class="btn">
+        <span asp-validation-summary="All" class="text-danger"></span>
+    </form>
+</section>
+
+<script>
+    $(document).ready(function () {
+        $('#video').change(function () {
+            var fileSize = this.files[0].size;
+            var megabytes = fileSize / (1024 * 1024);
+            if (megabytes > 100) {
+                $('#errorMessage').text("حجم الفيديو أكبر من 100 ميجابايت");
+            } else {
+                $('#errorMessage').empty();
+            }
+        });
+    });
+</script>

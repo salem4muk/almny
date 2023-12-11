@@ -1,0 +1,34 @@
+D:\almny\almny.Repository\bin\Debug\net6.0\almny.Repository.deps.json
+D:\almny\almny.Repository\bin\Debug\net6.0\almny.Repository.dll
+D:\almny\almny.Repository\bin\Debug\net6.0\almny.Repository.pdb
+D:\almny\almny.Repository\bin\Debug\net6.0\almny.Models.dll
+D:\almny\almny.Repository\bin\Debug\net6.0\almny.Models.pdb
+D:\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.csproj.AssemblyReference.cache
+D:\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.AssemblyInfoInputs.cache
+D:\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.AssemblyInfo.cs
+D:\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.csproj.CoreCompileInputs.cache
+D:\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.csproj.CopyComplete
+D:\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.dll
+D:\almny\almny.Repository\obj\Debug\net6.0\refint\almny.Repository.dll
+D:\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.pdb
+D:\almny\almny.Repository\obj\Debug\net6.0\ref\almny.Repository.dll
+D:\almny\almny.Repository\bin\Debug\net6.0\almny.Repository.runtimeconfig.json
+D:\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.genruntimeconfig.cache
+D:\Visual Studio Projects\almny\almny.Repository\bin\Debug\net6.0\almny.Repository.deps.json
+D:\Visual Studio Projects\almny\almny.Repository\bin\Debug\net6.0\almny.Repository.runtimeconfig.json
+D:\Visual Studio Projects\almny\almny.Repository\bin\Debug\net6.0\almny.Repository.dll
+D:\Visual Studio Projects\almny\almny.Repository\bin\Debug\net6.0\almny.Repository.pdb
+D:\Visual Studio Projects\almny\almny.Repository\bin\Debug\net6.0\almny.Models.dll
+D:\Visual Studio Projects\almny\almny.Repository\bin\Debug\net6.0\almny.Models.pdb
+D:\Visual Studio Projects\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.csproj.AssemblyReference.cache
+D:\Visual Studio Projects\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio Projects\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.AssemblyInfoInputs.cache
+D:\Visual Studio Projects\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.AssemblyInfo.cs
+D:\Visual Studio Projects\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.csproj.CoreCompileInputs.cache
+D:\Visual Studio Projects\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.csproj.CopyComplete
+D:\Visual Studio Projects\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.dll
+D:\Visual Studio Projects\almny\almny.Repository\obj\Debug\net6.0\refint\almny.Repository.dll
+D:\Visual Studio Projects\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.pdb
+D:\Visual Studio Projects\almny\almny.Repository\obj\Debug\net6.0\almny.Repository.genruntimeconfig.cache
+D:\Visual Studio Projects\almny\almny.Repository\obj\Debug\net6.0\ref\almny.Repository.dll

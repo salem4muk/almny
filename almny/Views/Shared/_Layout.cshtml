@@ -1,0 +1,108 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> signInManager
+@inject UserManager<ApplicationUser> userManager
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="~/images/icon/3almny.png" />
+    <title>علمني | @ViewBag.Title</title>
+    <meta name="description" content="علمني بتوفرلك كل مايلزمك من المواد
+        الدراسية للصف الثانوي بشكل مبسط ومجاني " />
+    <meta name="keywords"
+          content="المرحلة الثانوية,الثانوي,اليمن,الثالث ثانوي اليمن,التربية والتعليم اليمن,الصف الاول ثانوي,الصف الثاني ثانوي" />
+
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="~/css/style.css" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="~/css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="~/css/all.min.css" />
+    <script src="~/js/jquery-3.6.4.min.js"></script>
+    <style>
+        .text-danger {
+            font-size: 1rem;
+            color: white;
+            margin: 1rem;
+            margin: 10px auto;
+            color: #D8000C;
+            background-color: #FFBABA;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start Main Div -->
+    <div class="container">
+        <!-- Start Header -->
+        <header>
+            <a asp-controller="Home" asp-action="Index" class="logo"><span>علمني</span></a>
+            <nav class="navbar">
+                <a asp-controller="Home" asp-action="Index">الرئيسية</a>
+                <a asp-controller="Videos" asp-action="Index">الفيديوهات التعليمية</a>
+                <a asp-controller="Books" asp-action="Index">الكتب الدراسية</a>
+                <a href="Home#about">من نحن</a>
+            </nav>
+
+            <!-- Dark mode and profile buttons -->
+            <div class="icons">
+                <!-- <div id="toggle-btn" class="fas fa-sun"></div> -->
+                <div id="toggle-btn" class="fas fa-sun"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="menu" class="fas fa-bars"></div>
+            </div>
+
+            <div class="profile">
+                @if (signInManager.IsSignedIn(User))
+                {
+                    var userImage = ((await userManager.GetUserAsync(User)).ProfilePicture);
+                    if(userImage == null)
+                    {
+                        <img src="~/Images/img/pic.jpg" class="image" alt="">
+
+                    }
+                    else
+                    {
+                        <img src="~/Uploads/images/@userImage" class="image" alt="">
+
+                    }
+                    <h3 class="name">@((await userManager.GetUserAsync(User)).Name)</h3>
+                    <a asp-controller="Account" asp-action="Profile" asp-route-id="@((await userManager.GetUserAsync(User)).Id)" class="btn">عرض الملف الشخصي</a>
+                    <a asp-controller="Account" asp-action="ChangePassword" asp-route-id="" class="btn">تغير كلمة السر</a>
+                    <a asp-controller="Account" asp-action="Logout" class="btn">تسجيل الخروج</a>
+                }
+                else
+                {
+                    <a asp-controller="Account" asp-action="Login" class="option-btn">تسجيل الدخول</a>
+                    <a asp-controller="Account" asp-action="Registration" class="option-btn">سجل الآن</a>
+                }
+            </div>
+        </header>
+        <!-- End Header -->
+        @RenderBody()
+
+        <!-- Start Footer -->
+        <section class="footer">
+            <div class="box-container">
+                <!-- Footer content here -->
+            </div>
+            <div class="credit">
+                تصميم
+                <a href="#" target="_blank">
+                    <span> CodeGenius </span>
+                </a>
+                | كل الحقوق محفوظة
+            </div>
+        </section>
+        <!-- End Footer -->
+    </div>
+    <!-- End Main Div -->
+    <!-- Main JS File -->
+    <script src="~/js/script.js"></script>
+    <script src="~/js/modernizr-2.8.3.js"></script>
+</body>
+
+</html>

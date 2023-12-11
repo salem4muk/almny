@@ -1,0 +1,86 @@
+﻿@model IEnumerable<almny.Models.Video>
+
+@{
+    ViewData["Title"] = "الفيديوهات التعليمية";
+}
+
+<div class="table">
+    <div class="table_header">
+        <h1 class="title">الفيديوهات التعليمية</h1>
+        <div>
+            <a class="btn" asp-action="Create">أضافة جديدة</a>
+        </div>
+    </div>
+    <form method="get" asp-action="Index" class="form-row">
+        <p>المستوى الدراسي</p>
+        <select name="LevelId" asp-items="ViewBag.LevelId" class="box">
+            <option value="">-- المستوى الدراسي</option>
+        </select>
+        <p>القسم</p>
+        <select name="DepartmentId" asp-items="ViewBag.DepartmentId" class="box">
+            <option value="">-- القسم</option>
+        </select>
+
+        <p>الفصل الدراسي</p>
+        <select name="SemesterId" asp-items="ViewBag.SemesterId" class="box">
+            <option value="">-- الفصل الدراسي</option>
+        </select>
+
+        <p>المادة الدراسية</p>
+        <select name="SubjectId" asp-items="ViewBag.SubjectId" class="box" class="box">
+            <option value="">-- المادة الدراسية</option>
+        </select>
+
+        <button class="btn" type="submit">تحديث</button>
+
+    </form>
+
+    <div class="table-section">
+        <table>
+            <thead>
+                <tr>
+                    <th>#م</th>
+                    <th>عنوان الفيديو</th>
+                    <th>الصورة</th>
+                    <th>المادة</th>
+                    <th>المستوى الدراسي</th>
+                    <th>القسم</th>
+                    <th>الفصل الدراسي</th>
+                    <th> اعداد</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            <img src="~/Uploads/images/@item.thumb">
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Subject.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Level.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Department.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Semester.Name)
+                        </td>
+                        <td>
+                            <a  asp-action="Edit" asp-route-id="@item.Id" class="btn-edit"><i class="fas fa-edit"></i></a>
+                            <a onclick="return confirm('هل انت متاكد من حذف هذه الفيديو؟');"  asp-action="Delete" asp-route-id="@item.Id" class="btn-delete"><i class="fas fa-trash"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

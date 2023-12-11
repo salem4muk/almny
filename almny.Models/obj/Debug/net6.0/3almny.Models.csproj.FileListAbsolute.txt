@@ -1,0 +1,12 @@
+D:\3almny\3almny.Models\bin\Debug\net6.0\3almny.Models.deps.json
+D:\3almny\3almny.Models\bin\Debug\net6.0\3almny.Models.dll
+D:\3almny\3almny.Models\bin\Debug\net6.0\3almny.Models.pdb
+D:\3almny\3almny.Models\obj\Debug\net6.0\3almny.Models.csproj.AssemblyReference.cache
+D:\3almny\3almny.Models\obj\Debug\net6.0\3almny.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\3almny\3almny.Models\obj\Debug\net6.0\3almny.Models.AssemblyInfoInputs.cache
+D:\3almny\3almny.Models\obj\Debug\net6.0\3almny.Models.AssemblyInfo.cs
+D:\3almny\3almny.Models\obj\Debug\net6.0\3almny.Models.csproj.CoreCompileInputs.cache
+D:\3almny\3almny.Models\obj\Debug\net6.0\3almny.Models.dll
+D:\3almny\3almny.Models\obj\Debug\net6.0\refint\3almny.Models.dll
+D:\3almny\3almny.Models\obj\Debug\net6.0\3almny.Models.pdb
+D:\3almny\3almny.Models\obj\Debug\net6.0\ref\3almny.Models.dll

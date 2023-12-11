@@ -1,0 +1,118 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using almny.Models;
+@inject SignInManager<ApplicationUser> signInManager
+@inject UserManager<ApplicationUser> userManager
+
+    @{
+    var userImage = ((await userManager.GetUserAsync(User)).ProfilePicture);
+    var userName = ((await userManager.GetUserAsync(User)).Name);
+    var userid= ((await userManager.GetUserAsync(User)).Id);
+
+    }
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="icon" href="~/Admin/Images/icon/3almny.png" />
+    <!-- Main Template CSS File -->
+    <link href="~/Admin/css/admin_style.css" rel="stylesheet" />
+    <!-- Render All Elements Normally -->
+    <link href="~/Admin/css/normalize.css" rel="stylesheet" />
+    <!-- Font Awesome Library -->
+    <link href="~/Admin/css/all.min.css" rel="stylesheet" />
+    <style>
+        .text-danger {
+            font-size: 1rem;
+            color: white;
+            margin: 1rem;
+            margin: 10px auto;
+            color: #D8000C;
+            background-color: #FFBABA;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Start Header Section -->
+    <header class="header">
+
+        <section class="flex">
+
+            <a asp-action="Index" asp-controller="Dashboard" class="logo">المشرف.</a>
+
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+                <a target="_blank" asp-area="" asp-action="Index" asp-controller="Home">
+                    <div id="view-website" class="fas fa-desktop"></div>
+                </a>
+            </div>
+
+            <div class="profile">
+                @if(userImage == null)
+                {
+                <img src="~/Images/img/pic.jpg" class="image" alt="">
+
+                }
+                else
+                {
+                <img src="~/Uploads/images/@userImage" class="image" alt="">
+
+                }                
+                <h3>@userName</h3>
+                <a asp-action="Update" asp-controller="Account" asp-route-id="@userid" class="btn">تحديث الملف الشخصي</a>
+                <a asp-action="Logout" asp-controller="Account" class="delete-btn">تسجيل خروج</a>
+            </div>
+        </section>
+
+    </header>
+    <!-- End Header Section -->
+    <!-- side bar section starts  -->
+    <div class="side-bar">
+
+        <div class="close-side-bar">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="profile">
+            @if(userImage == null)
+            {
+            <img src="~/Images/img/pic.jpg" class="image" alt="">
+
+            }
+            else
+            {
+            <img src="~/Uploads/images/@userImage" class="image" alt="">
+
+            }
+            <h3>@userName</h3>
+            <a asp-action="Update" asp-controller="Account" asp-route-id="@userid" class="btn">تحديث الملف الشخصي</a>
+        </div>
+        <nav class="navbar">
+            <a asp-action="Index" asp-controller="Dashboard"><i class="fas fa-home"></i><span>الصفحه الرئيسيه</span></a>
+            <a asp-action="Index" asp-controller="Subject"><i class="fa-solid fa-bars-staggered"></i><span>المواد الدراسية</span></a>
+            <a asp-action="Index" asp-controller="Video"><i class="fas fa-video"></i><span>الفديوهات التعليمية</span></a>
+            <a asp-action="Index" asp-controller="Book"><i class="fas fa-book"></i><span>الكتب الدراسية</span></a>
+            @* <a asp-action="Index" asp-controller="Exam"><i class="fa fa-quora"></i><span>الامتحانات السابقة</span></a> *@
+            @* <a asp-action="Index" asp-controller="User"><i class="fas fa-user"></i><span>المستخدمين</span></a> *@
+            <a asp-action="Logout" asp-controller="Account"><i class="fas fa-right-from-bracket"></i><span>تسجيل خروج</span></a>
+        </nav>
+
+    </div>
+    <!-- side bar section ends -->
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer class="footer">
+        <p>&copy; @DateTime.Now.Year - بواسطة CodeGenius</p>
+    </footer>
+    <script src="~/Admin/js/admin_script.js"></script>
+    @* <script src="~/js/modernizr-2.8.3.js"></script> *@
+</body>
+</html>

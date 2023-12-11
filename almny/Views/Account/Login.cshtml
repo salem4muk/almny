@@ -1,0 +1,25 @@
+﻿@model almny.Models.DTO.LoginModel
+@{
+    ViewData["Title"] = "تسجيل الدخول";
+}
+
+<section class="form-container">
+
+    <form asp-controller="Account" asp-action="Login" method="post" class="login" role="form">
+        <h3>مرحباً بك مرة أخرى!</h3>
+        <p>بريدك الإلكتروني <span>*</span></p>
+        <input asp-for="Email" class="box" placeholder="أدخل بريدك الإلكتروني" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+        <p>كلمة المرور الخاصة بك <span>*</span></p>
+        <input asp-for="Password" type="password" class="box" placeholder="أدخل كلمة المرور الخاصة بك" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+        @if (TempData["msg"] != null)
+        {
+            <div class="text-danger">@TempData["msg"]</div>
+        }
+        <p class="link">ليس لديك حساب؟ <a style="color:#813daf;" asp-controller="Account" asp-action="Registration">سجل الآن</a></p>
+        <button type="submit" name="submit" class="option-btn">تسجيل الدخول الآن</button>
+
+    </form>
+
+</section>
